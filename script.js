@@ -34,7 +34,7 @@ function generatePassword() {
 
   var newPassword =""
   for (i= 0 ; 1<length; i++){
-    newPassword = availableCharacters[Math.floor(math.random() * availableCharacters.length)]
+    newPassword = availableCharacters[Math.floor(Math.random() * availableCharacters.length)]
   }
     return newPassword;
   }
@@ -44,38 +44,20 @@ function generatePassword() {
   if (isNaN(length)){
     alert("Make sure you enter a number for your length!")
   }
-  else if (length < 8 || > 128) {
+  else if (length < 8 || length > 128) {
     alert("Password must be at least 8 characters!")
-
-    else if (NaN(length)){
-      alert ("Password must be at least 8 characters and no more than 128!")
-      return getLength()
     }
     else{
       return length;
     }
   }
 
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", generatePassword);
-
-
-  
-}
-var newPassword = ""
-
-
-// Get references to the #generate element
-
-
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  passwordText.value = password}
 
-}
-
-;
+  // Add event listener to generate button
+generateBtn.addEventListener("click",generatePassword);
