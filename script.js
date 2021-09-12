@@ -32,9 +32,9 @@ function generatePassword() {
   if (wouldLikeUppers === true)
   availableCharacters = availableCharacters + uppercase
 
-  var newPassword =""
-  for (i= 0 ; 1<length; i++){
-    newPassword = availableCharacters[Math.floor(Math.random() * availableCharacters.length)]
+  var newPassword ="";
+  for (i=0 ; 1<length; i++){
+    newPassword += availableCharacters[Math.floor(Math.random() * availableCharacters.length)]
   }
     return newPassword;
   }
